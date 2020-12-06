@@ -54,5 +54,11 @@ public class Radioman {
         volume--;
 
 }
+    public void decreaseVolume() {
+        if (volume == 0) {
+            return;
+        }
+        volume--;
+
 }
 
