@@ -20,10 +20,12 @@ public class Radioman {
 
     public void setStation(int station) {
         if (station > 9) {
+            this.station = 0;
             return;
         }
 
         if (station < 0) {
+            this.station = 9;
             return;
         }
         this.station = station;
@@ -31,13 +33,12 @@ public class Radioman {
 
 
     public void increaseStation() {
-        setStation(this.station - 1);
-    }
-
-    public void decreaseStation() {
         setStation(this.station + 1);
     }
 
+    public void decreaseStation() {
+        setStation(this.station - 1);
+    }
 
     public void increaseVolume() {
         if (volume == 10) {
@@ -45,20 +46,10 @@ public class Radioman {
         }
         volume++;
     }
-
-
     public void decreaseVolume() {
         if (volume == 0) {
             return;
         }
         volume--;
-
+    }
 }
-    public void decreaseVolume() {
-        if (volume == 0) {
-            return;
-        }
-        volume--;
-
-}
-
