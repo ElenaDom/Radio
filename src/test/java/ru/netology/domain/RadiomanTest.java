@@ -64,6 +64,7 @@ class RadiomanTest {
         radioman.decreaseStation();
         assertEquals(10, radioman.getStation());
     }
+
 }
 
 

@@ -5,6 +5,13 @@ public class Radioman {
     private int station;
     private int stationControl;
 
+    public Radioman() {
+    }
+
+    public Radioman(int volume) {
+        this.volume = volume;
+    }
+
     public int getStationControl() {
         return stationControl;
     }
