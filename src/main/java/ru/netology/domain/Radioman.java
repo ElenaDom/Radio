@@ -6,10 +6,11 @@ public class Radioman {
     private int stationControl;
 
     public Radioman() {
+        stationControl = 10;
     }
 
-    public Radioman(int volume) {
-        this.volume = volume;
+    public Radioman(int stationControl) {
+        this.stationControl = stationControl;
     }
 
     public int getStationControl() {
@@ -35,12 +36,14 @@ public class Radioman {
 
     public void setStation(int station) {
         if (station > 10) {
+            if (station > this.stationControl)
             this.station = 0;
             return;
         }
 
         if (station < 0) {
             this.station = 10;
+            this.station = this.stationControl;
             return;
         }
         this.station = station;

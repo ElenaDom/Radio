@@ -64,7 +64,32 @@ class RadiomanTest {
         radioman.decreaseStation();
         assertEquals(10, radioman.getStation());
     }
+    @Test
+    public void shouldStationControlDefault() {
+        Radioman radioman = new Radioman();
+        radioman.setStationControl(10);
+       assertEquals(10, radioman.getStationControl());
+    }
+    @Test
+    public  void shouldStationControlConstructor() {
+        Radioman radioman = new Radioman(15);
+        radioman.getStationControl();
+        assertEquals(15, radioman.getStationControl());
 
+    }
+    @Test
+    public void shouldStationControl() {
+        Radioman radioman = new Radioman();
+        radioman.setStationControl(15);
+        assertEquals(15, radioman.getStationControl());
+
+    }
+    @Test
+    public void shouldStationControlFix() {
+        Radioman radioman = new Radioman(35);
+        radioman.setStationControl(25);
+        assertEquals(25, radioman.getStationControl());
+    }
 }
 
 
