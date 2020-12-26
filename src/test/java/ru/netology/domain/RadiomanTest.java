@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RadiomanTest {
 
+
     @Test
     public void shouldIncreaseVolumeNotMax() {
         Radioman radioman = new Radioman();
@@ -16,9 +17,9 @@ class RadiomanTest {
     @Test
     public void shouldIncreaseVolumeMax() {
         Radioman radioman = new Radioman();
-        radioman.setVolume(10);
+        radioman.setVolume(100);
         radioman.increaseVolume();
-        assertEquals(10, radioman.getVolume());
+        assertEquals(100, radioman.getVolume());
     }
     @Test
     public void shouldDecreaseVolumeNotMin() {
@@ -44,7 +45,7 @@ class RadiomanTest {
     @Test
     public void shouldIncreaseStationMax() {
         Radioman radioman = new Radioman();
-        radioman.setStation(9);
+        radioman.setStation(10);
         radioman.increaseStation();
         assertEquals(0, radioman.getStation());
 
@@ -61,7 +62,33 @@ class RadiomanTest {
         Radioman radioman = new Radioman();
         radioman.setStation(0);
         radioman.decreaseStation();
-        assertEquals(9, radioman.getStation());
+        assertEquals(10, radioman.getStation());
+    }
+    @Test
+    public void shouldStationControlDefault() {
+        Radioman radioman = new Radioman();
+        radioman.setStationControl(10);
+       assertEquals(10, radioman.getStationControl());
+    }
+    @Test
+    public  void shouldStationControlConstructor() {
+        Radioman radioman = new Radioman(15);
+        radioman.getStationControl();
+        assertEquals(15, radioman.getStationControl());
+
+    }
+    @Test
+    public void shouldStationControl() {
+        Radioman radioman = new Radioman();
+        radioman.setStationControl(15);
+        assertEquals(15, radioman.getStationControl());
+
+    }
+    @Test
+    public void shouldStationControlFix() {
+        Radioman radioman = new Radioman(35);
+        radioman.setStationControl(25);
+        assertEquals(25, radioman.getStationControl());
     }
 }
 
