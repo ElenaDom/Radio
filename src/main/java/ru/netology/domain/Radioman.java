@@ -5,6 +5,12 @@ public class Radioman {
     private int station;
     private int stationControl;
 
+    public Radioman(int volume, int station, int stationControl) {
+        this.volume = volume;
+        this.station = station;
+        this.stationControl = stationControl;
+    }
+
     public Radioman() {
         stationControl = 10;
     }
